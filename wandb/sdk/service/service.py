@@ -45,7 +45,7 @@ class _Service:
     def _wait_for_ports(
         self, fname: str, proc: Optional[subprocess.Popen] = None
     ) -> bool:
-        time_max = time.time() + 30
+        time_max = time.time() + 300
         while time.time() < time_max:
             if proc and proc.poll():
                 # process finished
